@@ -1,30 +1,28 @@
 class Solution {
 public:
-    
-    //THREE POINTER APPROACH
     void sortColors(vector<int>& nums) {
-         int low = 0,//iNTIALIZING LOW AS O MID AS 0 AND HIGH AS LAST INDEX
-          mid = 0, 
-        high = nums.size()-1;
-               while(mid<=high)
-       {
-              // IF THE ELEMENT IS 0 
-                   
-           if(nums[mid]==0)
-            
-                swap(nums[mid++],nums[low++]);
-                   
-              // IF THE ELEMENT IS 1 . 
-                   
-          else if(nums[mid]==1)
-            
-                 mid++;
-                   
-               // IF THE ELEMENT IS 2 
-           else
-             swap(nums[mid],nums[high--]);
-                    }
+         int low= 0;
+        int mid= 0;
+        int high =nums.size()-1;
         
-      //  sort(nums.begin(),nums.end());{Not use it}
+        while(mid<=high){
+            
+            //when mid is 0
+            if(nums[mid]==0){
+                swap(nums[mid],nums[low]);
+                mid++;
+                low++;
+            }
+            else if(nums[mid]==1)//when mid is 1
+            {
+                mid++;
+            }
+            else //when mid is 2
+            {
+                swap(nums[mid],nums[high]);
+                mid;
+                high--;
+            }
+        }
     }
 };
