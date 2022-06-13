@@ -19,7 +19,6 @@ public:
             else //when mid is 2
             {
                 swap(nums[mid],nums[high]);
-                mid;
                 high--;
             }
         }
