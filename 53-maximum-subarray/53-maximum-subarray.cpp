@@ -39,14 +39,15 @@ public:
         
         
         
-        //Approach 3:Kadane's Algorithim 
+        //Approach 3:Kadane's Algorithim it takes O(n) time
         
         int maxi=INT_MIN;
         int sum=0;
         for(int i=0;i<nums.size();i++){
         sum+=nums[i];
             maxi=max(sum,maxi);
-            if(sum<0) sum=0;
+            if(sum<0)
+                sum=0;
             
         }
         return maxi;
