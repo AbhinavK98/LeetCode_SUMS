@@ -14,7 +14,7 @@ public:
           i++;
           result = i * i;
         }
-        return i - 1;
+        return i-1 ;
         
        //  int s=0;
        //  int e=x;
