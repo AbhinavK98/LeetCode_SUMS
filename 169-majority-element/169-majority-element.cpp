@@ -2,7 +2,7 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         
-        //Approach 1: T>C=O(n*n)
+        //Approach 1: TC=O(n*n SC=O(1)
         
 //        int n=nums.size();
   
@@ -21,6 +21,8 @@ public:
 //         }
         
 //        return 0; 
+        
+        //Approach 2: TC-O(nlog(n)+n), SC=O(1) Better than previous approach but not linear`
         
         int n=nums.size();
             sort(nums.begin(),nums.end());
