@@ -1,22 +1,25 @@
+//Approach 2:OPtimal(Two pointer approach)
+//First took 2 pointer start and end
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
         
-        int j=height.size()-1;
-        int i=0;
-        int max=0;
+        int end=height.size()-1;
+        int start=0;
+        int maxarea=0;
         int area;
-        while(i<j){
-            area=min(height[i],height[j])*(j-i);
-               if(area>max)
-                   max=area;
-            if(min(height[i],height[j])==height[i])
-                i++;
+        while(start<end){
+            area=min(height[start],height[end])*(end-start);
+               if(area>maxarea)
+                   maxarea=area;
+            if(min(height[start],height[end])==height[start])
+                start++;
             else
-                j--;     
+                end--;     
         }
         
-        return max;
+        return maxarea;
     }
 };
 
